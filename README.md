@@ -50,5 +50,9 @@
 <br><a href="https://github.com/kondrash228/learn-cpp/blob/master/dynamic%20memory/null/nullptr.cpp">перейти в пример</a><br> 
 
 # Dynamic arrays
-Для того что бы создать динамическй массив, нужно использовать указатель, ключевое слово new, и в конце нужно очистить память с помощью delete [] arr;
+Для того что бы создать динамическй массив, нужно использовать указатель, ключевое слово new, и в конце нужно очистить память с помощью delete [] arr; Если массив является динамическим, то он будет находиться в динамической памяти
+<br><a href="https://github.com/kondrash228/learn-cpp/blob/master/dynamic%20memory/arrays">перейти в пример</a><br> 
+ 
+# Double Dynamic Arrays
+Для того что бы создать двойной динмический массив, нужно использовать следующую конструкцию - int **arr = new int* [rows]; и создается массив указателей
 <br><a href="https://github.com/kondrash228/learn-cpp/blob/master/dynamic%20memory/arrays">перейти в пример</a><br> 
