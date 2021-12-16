@@ -20,6 +20,8 @@ int main()
         std::cout << arr + i << "\n";
     }
     
+    
+    
 
     delete []arr;
     return 0;
