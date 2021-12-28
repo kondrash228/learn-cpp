@@ -20,7 +20,7 @@ int main()
         std::cout << arr + i << "\n";
     }
     
-    
+    std::cout << arr << "\n";
     
 
     delete []arr;
