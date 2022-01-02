@@ -4,7 +4,7 @@
 int main()
 {
 
-    char string[] = {'h', 'e', 'l', 'l', 'o'. '\0'};
+    char string[] = {'h', 'e', 'l', 'l', 'o', '\0'};
 
     char string2[] = "hello";
 
