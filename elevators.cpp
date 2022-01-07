@@ -1,10 +1,12 @@
 #include <iostream>
 #include <ctime>
 #include <vector>
+#include <cmath>
 
 
 int main()
 {
+
     std::cout << "How many elevators in the hotel?" << std::endl;
     int countOfElevators;
     std::cin >> countOfElevators;
@@ -16,38 +18,37 @@ int main()
     for (int i = 0; i < countOfElevators; i++)
     {
         elevators[i] = rand() % 10 + 1;
-    }
-
-    for (int i = 0; i < countOfElevators; i++)
-    {
         std::cout << "Elevator on " << elevators[i] << " floor" << std::endl;
     }
+
     std::cout << std::endl;
 
     std::cout << "What floor are you on?" << std::endl;
 
-    int currentFloor, bestElevator;
+    int currentFloor;
     std::cin >> currentFloor;
 
-    bestElevator = currentFloor;
+    std::vector<int> posOfElevators(countOfElevators);
 
     for (int i = 0; i < countOfElevators; i++)
     {
-        int currentPos = elevators[i] - currentFloor;
-        std::cout << currentPos << std::endl;
-        
-        std::vector<int> posOfElevators(countOfElevators);
-
-        posOfElevators.push_back(currentPos);
-
-        if (posOfElevators[i] < bestElevator)
-        {
-            bestElevator = posOfElevators[i];
-        }
-
+        posOfElevators[i] = abs(elevators[i] - currentFloor);
     }
 
-    std::cout << "Succes! The best elevator is " << bestElevator << std::endl;
+
+    int min_elem = posOfElevators[0];
+    int index = 0;
+
+    for (int i = 1; i < countOfElevators; i++)
+    {
+        if (posOfElevators[i] < min_elem)
+        {
+            index = i;
+        }
+    }
+
+
+    std::cout << "Success! The best elevator is on the " << elevators[index] << " floor" << std::endl;
 
     return 0;
 }
