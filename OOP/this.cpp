@@ -13,12 +13,14 @@ public:
     {
         x = 0;
         y = 0;
+        std::cout << this << " constructor" << std::endl;
     }
 
     Point(int valueX, int valueY)
     {
         x = valueX;
         y = valueY;
+        std::cout << this << " constructor" << std::endl;
     }
 
     int GetX()
@@ -36,9 +38,9 @@ public:
         x = valueX;
     }
 
-    void SetY(int valueY)
+    void SetY(int y)
     {
-        y = valueY;
+        this->y = y;
     }
 
     void Print()
@@ -47,37 +49,13 @@ public:
     }
 };
 
-class CoffeGrinder
-{
-private:
-
-     bool checkVoltage()
-     {
-         return true;
-     }
-
-
-public:
-    void start()
-    {
-         bool voltageIsNormal = checkVoltage();
-
-        if (voltageIsNormal)
-        {
-            std::cout << "VjuHHH!!" << std::endl;
-        }
-        else
-        {
-            std::cout << "Beep Beep" << std::endl;
-        }
-
-    }
-
-};
-
 
 int main()
 {
+    Point a;
+    a.SetY(5);
+    a.Print();
+
 
     return 0;
 }
