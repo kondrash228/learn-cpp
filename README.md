@@ -7,7 +7,7 @@
 ! - не
 
 # TASK
-Написать алгортим для расчета ближайшего лифта к человек 
+Написать алгортим для расчета ближайшего лифта к человеку 
 <br><a href="https://github.com/kondrash228/learn-cpp/blob/master/elevators.cpp">попытки это сделать</a><br> 
 
 # Random Numbers

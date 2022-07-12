@@ -1,10 +1,35 @@
 #include <iostream>
-#include <vector> 
 
-int main()
-{   
+class Emploee
+{
+private:
+std::string name;
+long long number;
 
-    std::vector<int> arr(10);
+public:
+    Emploee(std::string name, long long number)
+    {
+        this->name = name;
+        this->number = number;
+    }
 
-    return 0;
+    void pushdata()
+    {
+        std::cout << "name " << this->name << std::endl << "numnber " << this->number << std::endl;
+
+    };   
+
+    int getdata()
+    {
+        return this->number;
+    }
+
+};
+
+int main(void)
+{
+    Emploee a("Egor", 15);
+
+    a.pushdata();
+
 }

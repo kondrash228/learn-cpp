@@ -2,35 +2,21 @@
 
 int main()
 {
-    int visiters, maxAge, minAge, numbers, middleAge;
-    int *ages = new int[visiters];
-    maxAge = ages[0];
-    minAge = ages[0];
 
-    std::cout << "how visiters are in the gym? ";
-    std::cin >> visiters;
+    int size;
+    std::cin >> size;
 
-    if (visiters == 1)
-        exit(0);
+    int *arr = int[size];
 
-    for (int i = 0; i < visiters; i++)
+    for (int i = 0; i < size; i++)
     {
-        int currentAge;
-        std::cout << "visitor " << "\n";
-        std::cin >> currentAge;
-        ages[i] = currentAge;
-        currentAge = 0;
+        arr[i] = rand() % 100;
     }
 
-    middleAge = 0;
-    for (int i = 0; i < visiters; i++)
+    for (int i = 0; i < size; i++)
     {
-        middleAge += ages[i];
+        std::cout << arr[i] << std::endl;
     }
-    middleAge /= visiters;
 
-    std::cout << "VISITERS: " << visiters << "\n"
-              << "MIDDLE AGE: " << middleAge << "\n";
-    delete[] ages;
-    return 0;
-} 
+}
+

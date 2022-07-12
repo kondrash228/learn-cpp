@@ -1,5 +1,10 @@
 #include <iostream>
 
+class A
+{
+public:
+    int a;
+};
 
 class Point
 {
