@@ -1,35 +1,20 @@
+#include <fstream>
 #include <iostream>
-
-class Emploee
+ 
+int main(int argc, char* argv[])
 {
-private:
-std::string name;
-long long number;
+    setlocale(LC_ALL, "rus");
 
-public:
-    Emploee(std::string name, long long number)
-    {
-        this->name = name;
-        this->number = number;
-    }
+    char buff[50];
 
-    void pushdata()
-    {
-        std::cout << "name " << this->name << std::endl << "numnber " << this->number << std::endl;
+    std::ifstream fin("cppstudio.txt");
 
-    };   
+    fin >> buff;
+    std::cout << buff << std::endl;
 
-    int getdata()
-    {
-        return this->number;
-    }
+    fin.getline(buff, 50);
+    fin.close();
 
-};
-
-int main(void)
-{
-    Emploee a("Egor", 15);
-
-    a.pushdata();
+    std::cout << buff << std::endl;
 
 }
