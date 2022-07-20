@@ -1,20 +1,22 @@
-#include <fstream>
 #include <iostream>
- 
-int main(int argc, char* argv[])
+#include <cmath>
+
+
+int main()
 {
-    setlocale(LC_ALL, "rus");
+    const float PI = M_PI;
+    const float g = 9.8;
 
-    char buff[50];
+    int V, T;
 
-    std::ifstream fin("cppstudio.txt");
+    std::cin >> V >> T;
 
-    fin >> buff;
-    std::cout << buff << std::endl;
+    float a,b;
+    b = (g * T) / (2 * V);
+    a = asin(b);
 
-    fin.getline(buff, 50);
-    fin.close();
+    std::cout << a << std::endl;
 
-    std::cout << buff << std::endl;
-
+    
+    return 0;
 }
