@@ -1,22 +1,19 @@
 #include <iostream>
-#include <cmath>
+#include <ctime>
 
 
 int main()
-{
-    const float PI = M_PI;
-    const float g = 9.8;
+{   
+    srand(time(NULL));
 
-    int V, T;
+    int a, b;
 
-    std::cin >> V >> T;
+    std::cin >> a >> b;
 
-    float a,b;
-    b = (g * T) / (2 * V);
-    a = asin(b);
+    const int cols = 10;
+    const int rows = 10;
 
-    std::cout << a << std::endl;
+    int **arr = new int* [rows];
 
-    
     return 0;
 }
